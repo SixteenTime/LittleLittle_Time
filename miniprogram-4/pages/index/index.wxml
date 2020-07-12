@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="index">
+<view class="indexText">几乎每一项工作都是离不开自律能力的，尤其是营销人员等岗位，他们的活动范围广而不确定，时间也是自己安排和支配，如果缺乏自律能力，必然做不出业绩来。招聘和选拔人才时，自律能力同样是重要的考虑因素。本测试为这一行为提供依据。</view>
+<button bindtap="gotoPage1" class="indexButton">点击测试</button>
+</view>

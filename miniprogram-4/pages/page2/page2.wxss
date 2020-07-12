@@ -1,0 +1,18 @@
+/* pages/page2/page2.wxss */
+.page2{
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 10px
+}
+.page2_text{
+  font-size: 19px;
+  font-family: "幼圆";
+  margin-bottom: 10px;
+}
+.page2_result{
+  font-size: 21px;
+  color: cadetblue;
+}

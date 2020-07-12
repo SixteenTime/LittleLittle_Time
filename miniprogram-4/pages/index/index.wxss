@@ -1,0 +1,19 @@
+/**index.wxss**/
+.index{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.indexText{
+  height: 50%;
+  padding: 10%;
+  font-family: "幼圆";
+  line-height: 1.6em;
+}
+.indexButton{
+  background-color: olivedrab;
+  color: aliceblue;
+}

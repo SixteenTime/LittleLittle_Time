@@ -1,0 +1,6 @@
+<!--pages/page2/page2.wxml-->
+<view class="page2">
+<view class="page2_text">满分：20</view>
+<view class="page2_text">您的得分：{{result}}</view>
+<view class="page2_result">结论：{{resultDatil}}</view>
+</view>

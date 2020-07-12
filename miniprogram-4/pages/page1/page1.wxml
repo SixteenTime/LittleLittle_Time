@@ -1,0 +1,14 @@
+<!--pages/page1/page1.wxml-->
+<view class="page1">
+	<view class="page1_head">
+		<view class="page1_index">{{index+1}},{{questionHead}}</view>
+	</view>
+	<view class="choise">
+		<view class="option" bindtap="chickYes">{{ye}}</view>
+		<view class="option" bindtap="chickNo">{{no}}</view>
+	</view>
+	<!-- <view class="page1_buttons">
+		<button class="page1_lastnum" bindtap="chickLastnum">上一题</button>
+		<button class="page1_submit" id="submit">提交</button>
+	</view> -->
+</view>
