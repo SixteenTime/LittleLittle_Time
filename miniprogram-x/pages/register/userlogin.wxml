@@ -1,0 +1,6 @@
+<!--pages/register/userlogin.wxml-->
+<view class="container">
+	 <view class="weui-article__h1">请先登录</view>
+
+	<button  wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="weui-btn weui-btn_primary">授权登陆</button>
+</view>
