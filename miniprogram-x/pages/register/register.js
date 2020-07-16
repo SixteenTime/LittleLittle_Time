@@ -1,5 +1,6 @@
 // pages/register/register.js
 const app=getApp()
+const userUrl=require('../../config.js').userUrl
 Page({
 
   /**
@@ -42,37 +43,42 @@ Page({
     if(!this.data.userName){
       wx.showToast({
         title: '姓名不能为空',
+        icon:"none"
       })
       return
     }
     else if(!this.data.userTel){
       wx.showToast({
         title: '手机号不能为空',
+        icon:"none"
       })
       return
     }
     else if(!this.data.userSch){
       wx.showToast({
         title: '学校不能为空',
+        icon:"none"
       })
       return
     }
     else if(!this.data.userSNo){
       wx.showToast({
         title: '学号不能为空',
+        icon:"none"
       })
       return
     }
     else if(!this.data.userEYear){
       wx.showToast({
         title: '入学年份不能为空',
+        icon:"none"
       })
       return
     }
     wx.request({
-      url: 'https://zjgsujiaoxue.applinzi.com/index.php/Api/User/register_by_openid',
+      url: userUrl+'register_by_openid',
       data:{
-        openid:wx.getStorageSync('test1_openid'),
+        openid:wx.getStorageSync('test_openid'),
         globalData:JSON.stringify(app.globalData.userInfo),
         name:this.data.userName,
         tel:this.data.userTel,
@@ -80,17 +86,27 @@ Page({
         num:this.data.userSNo,
         enter_year:this.data.userEYear
       },
-      success:res=>{
+      success:function(res){
         console.log('ree',res)
         if(res.data.is_register){
-          wx.redirectTo({
-            url: '/pages/my/myInfo/myInfo',
+          wx.switchTab({
+            url: '../index/index',
           })
         }
+        else{
+          wx.switchTab({
+            url: '../index/index',
+          })
+        }
+      },
+      fail:function(){
+        console.log('error !!')
+        wx.switchTab({
+          url: '../index/index',
+        })
       }
     })
   },
-  
 
   /**
    * 生命周期函数--监听页面加载

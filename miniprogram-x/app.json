@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/register/userlogin",
-    "pages/logs/logs",
-    "pages/register/register",
     "pages/index/index",
-    "pages/my/myInfo/myInfo"
+    "pages/logs/logs",
+    "pages/register/userlogin",
+    "pages/register/register",
+    "pages/my/myinfo",
+    "pages/my/change"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,7 +13,21 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  
+  "tabBar":{
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"主页",
+      "iconPath":"images/index1.png",
+      "selectedIconPath":"images/index.png"
+    },
+    {
+      "pagePath":"pages/my/myinfo",
+      "text":"我的",
+      "iconPath":"images/my1.png",
+      "selectedIconPath":"images/my.png"
+    }
+  ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

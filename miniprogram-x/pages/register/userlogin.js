@@ -1,3 +1,5 @@
+// pages/register/userlogin.js
+//index.js
 //获取应用实例
 const app = getApp()
 
@@ -7,7 +9,6 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
- 
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -40,14 +41,12 @@ Page({
         url: '/pages/register/register',
       })
     }
-    else{
-      wx.navigateTo({
-        url: '/pages/my/myInfo/myInfo',
-      })
-    }
   },
   getUserInfo: function(e) {
-    console.log(e)
+   // console.log(e)
+   wx.navigateTo({
+     url: '/pages/register/register',
+   })
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
